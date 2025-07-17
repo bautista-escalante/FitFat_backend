@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AccessController;
 
-Route::get('/', function () {
-    return view('welcome');
-}); 
+
+Route::post('/login', [AccessController::class, "login"]); 
+
+Route::post('/signin', [AccessController::class, "signin"]); 
